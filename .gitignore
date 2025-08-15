@@ -1,0 +1,129 @@
+# ==============================================================================
+# UnitreeIL G1 Repository - Git Ignore File  
+# ==============================================================================
+# This file excludes large files and generated content to keep the repo clean
+
+# ==============================================================================
+# TRAINING OUTPUTS AND MODEL FILES (VERY LARGE)
+# ==============================================================================
+
+# Training output directories (contains checkpoints, logs, models)
+unitree_IL_lerobot/unitree_lerobot/outputs*/
+unitree_IL_lerobot/unitree_lerobot/outputs_unitree_g1_*/
+
+# Evaluation results directories
+unitree_IL_lerobot/unitree_lerobot/eval_results*/
+
+# Model checkpoint files (can be several GB each)
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# ==============================================================================
+# DATASET FILES (LARGE VIDEO AND DATA FILES)
+# ==============================================================================
+
+# LeRobot datasets (large video and parquet files)
+unitree_IL_lerobot/unitree_lerobot/lerobot_datasets/
+
+# Video files (robot recordings)
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Data files (robot trajectories)
+*.parquet
+*.h5
+*.hdf5
+
+# Episode data files
+**/episode_*/data.json
+**/episode_*/*.mp4
+
+# ==============================================================================
+# EXPERIMENT TRACKING AND LOGS
+# ==============================================================================
+
+# Weights & Biases experiment tracking
+unitree_IL_lerobot/unitree_lerobot/wandb/
+**/wandb/
+
+# Training and evaluation logs
+unitree_IL_lerobot/unitree_lerobot/lerobot/outputs/
+logs/
+runs/
+*.log
+*.out
+*.err
+
+# ==============================================================================
+# PYTHON AND DEVELOPMENT FILES
+# ==============================================================================
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+venv/
+env/
+.env
+.venv
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ==============================================================================
+# TEMPORARY AND BACKUP FILES
+# ==============================================================================
+
+# Temporary files
+*.tmp
+*.temp
+*~
+*.bak
+*.backup
+
+# Archive files
+*.zip
+*.tar.gz
+*.tar.bz2
+*.rar
+
+# ==============================================================================
+# SYSTEM AND CACHE FILES
+# ==============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+.directory
+.Trash-*
+
+# Windows  
+Thumbs.db
+Desktop.ini
+
+# Model and package caches
+.cache/
+*/.cache/
+.huggingface/
